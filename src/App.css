@@ -21,6 +21,7 @@
   left: 0;
   min-width: 100%;
   min-height: 100%;
+  object-fit: cover;
 }
 
 .App-window {
@@ -28,6 +29,13 @@
   height: calc(100% - 30%);
   width: calc(100% - 30%);
   border-radius: 5px;
+}
+
+@media (max-width: 280px) {
+  .App-window {
+    height: calc(100% - 10%);
+    width: calc(100% - 10%);
+  }
 }
 
 /* NAVIGATION BAR */
@@ -97,6 +105,23 @@ a {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 2;
   overflow: hidden;
+}
+
+@media (max-width: 400px) {
+  .Folder-window {
+    width: 385px;
+  }
+}
+@media (max-width: 280px) {
+  .Folder-window {
+    width: 200px;
+    height: 500px;
+  }
+  .Link-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+  }
 }
 
 .Folder-image {
